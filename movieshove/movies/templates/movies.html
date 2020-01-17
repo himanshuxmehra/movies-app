@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+  <ul class="list-unstyled">
+
+    {% for movie in allmovies %}
+              <li class="media">
+    <img src="{{ movie.poster.url }}" class="mr-3" alt="..." width="360" height="144">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ movie.title }}</h5>
+      {{ movie.plot }}
+             <br>   <a href="{% url 'watch' movie.slug  %}" class="btn btn-primary">Watch Now!</a>
+
+    </div>
+  </li>
+      {% endfor %}
+  </ul>
+{% endblock %}

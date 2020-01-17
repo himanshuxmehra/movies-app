@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block head %}
+
+<head>
+  <title>Watch {{ object.title }} | {{ object.year }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container">
+
+      <div class="card-body">
+      <center>  <h1>{{ object.title }}</h1>
+        <p class=" text-muted">{{ object.year }} | {{ object.runtime }} mins</p>
+</center>
+
+
+        <div class="row">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills nav-dark bg-dark" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+        Movie</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+        Trailer</a>
+
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{ object.trailer }}"></iframe>
+    </div></div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{ object.trailer }}"></iframe>
+    </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+  <h1>{{ object.title }}</h1>
+    <img src="{{ object.poster.url }}" align="left" height="200" width="400">
+        <p class="card-text "> &nbsp; &nbsp;  {{ object.plot }}</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+{% endblock %}
