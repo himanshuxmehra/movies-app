@@ -1,3 +1,0 @@
-admin panel changes:-
-
-admin.py 
