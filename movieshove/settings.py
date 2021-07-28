@@ -126,3 +126,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 TMDB_API_KEY = os.environ.get('API_KEY')
+DOMAIN = os.environ.get('DOMAIN')
+MAIL_API_URL = os.environ.get('MAIL_API_URL')
+MAIL_API_KEY = os.environ.get('MAIL_API_KEY')
+MAIL_API_ADDRESS = os.environ.get('MAIL_API_ADDRESS')

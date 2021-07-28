@@ -34,3 +34,7 @@ class Movie(models.Model):
 
     class Meta:
         get_latest_by = 'date_added'
+
+class Subscribers(models.Model):
+    email = models.EmailField(max_length=254,primary_key=True)
+    name = models.TextField(blank=False)
