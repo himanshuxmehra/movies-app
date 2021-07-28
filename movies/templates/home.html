@@ -11,24 +11,25 @@
       <li data-target="#slide" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner w-100 h-50">
-    <div class="carousel-item active" data-interval="3000">
-      <img src="media/images/welcome.jpg" height="400" width="500" class="d-block w-100" alt="...">
-    </div>
 
-
+<center>
 {% for movie in allmovies %}
         {% if forloop.counter <= 4 %}
-             <div class="carousel-item" data-interval="3000">
-      <img width="100%" height="400" src="{{ movie.poster.url }}" class="d-block" alt="...">
-                 <div class="carousel-caption d-none d-md-block">
-                  <h5>{{ movie.title }}</h5>
+        {% if forloop.counter == 1 %}
+        <div class="carousel-item active" data-interval="3000">
+        {% else %}
+             <div class="carousel-item " data-interval="3000">
+          {% endif %}
+      <img height="500" width="60%" align="center" src="{{ movie.cover }}" class="d-block" alt="...">
+                 <div class="carousel-caption d-none d-md-block dark" style="font-color: black !important">
+                  <h2>{{ movie.title }}</h2>
                   <p>{{ movie.plot }}</p>
                 </div>
     </div>
         {% endif %}
         {% empty %}
        No movies
-    {% endfor %}
+    {% endfor %}</center>
     <a class="carousel-control-prev" href="#slide" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -44,14 +45,19 @@
 
 
  <div class="row ">
-{% for movie in pop %}
+{% for movie in pop|slice:":16" %}
      <div class="col-md-3">
           <div class="thumbnail">
  <a href="{% url 'watch' movie.slug %}">
-        <img width="360" src="{{movie.poster.url}}" class="img-thumbnail img-responsive" alt="..." height="100">
+        <img width="360" src="{{movie.poster}}" class="img-thumbnail img-responsive" alt="..." height="100">
      <div class="caption">
          <center><h4 class="bg-light">{{ movie.title }} | {{ movie.year }}</h4></center>
      </div></a></div></div>
 {% endfor %}
   </div>
+<center>
+  <div class="alert alert-danger" role="alert">
+  Or have a look at the whole list of Movies <a href="/movies" class="alert-link">Here</a>. Or Search <a href="/search" class="alert-link">Here</a>.
+</div>
+</center>
 {% endblock %}

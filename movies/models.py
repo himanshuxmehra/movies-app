@@ -14,6 +14,7 @@ class Movie(models.Model):
         (RATED_PG, 'PG - Parental Guidance'),
         (RATED_R, 'R - Restricted'),
     )
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=180)
     plot = models.TextField(max_length=1000)
     year = models.PositiveIntegerField()
@@ -21,7 +22,8 @@ class Movie(models.Model):
     rating = models.IntegerField(choices=RATINGS, default=NOT_RATED)
     runtime = models.PositiveIntegerField()
     trailer = models.URLField(blank=True)
-    poster = models.ImageField(upload_to='images/', default='images/default.jpg')
+    poster = models.URLField(default='images/default.jpg')
+    cover = models.URLField(default='images/default.jpg')
     date_added = models.DateTimeField(auto_now=True)
     hit = models.PositiveIntegerField(default=0)
 

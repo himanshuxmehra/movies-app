@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<center>
+        <h2>
+        Thanks for fetching New Movies!! 
+        </h2>
+        <br>
+        <h3>
+        No. of New Movies Added : {{ count }}
+        </h3><br>
+        <h6>
+        {% for movie in newMovies %}
+                    <li>{{ movie }}</li>
+
+      {% endfor %}
+        
+        </h6>
+</center>
+{% endblock %}

@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+  background: #fff !important;
+}
+  </style>
 </head>
 
 {% endblock %}
@@ -50,20 +55,12 @@
 
       </div>
   <h1>{{ object.title }}</h1>
-    <img src="{{ object.poster.url }}" align="left" height="200" width="400">
-        <p class="card-text "> &nbsp; &nbsp;  {{ object.plot }}</p>
+    <img src="{{ object.poster }}" align="left" width="400">
+        <h3 class="card-text "> &nbsp; &nbsp;  {{ object.plot }}</h3>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  
 </div>
 
 {% endblock %}

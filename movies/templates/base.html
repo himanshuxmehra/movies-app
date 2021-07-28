@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/carousel/">
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Movies Hove</title>
+    <title>Movies Hove : Movies Database App 🍿</title>
 
     <style type="">
 
@@ -92,8 +93,243 @@
 
       }
   </style>
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+$browser-context: 16; 
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+body {
+  background: #0f0f0f;
+}
+
+[data-component='cta-newsletter-modal'] {
+  #newsletter-modal .modal-body {
+    max-height: 405px;
+  }
+  .modal-dialog {
+    max-width: 690px;
+  }
+  .close {
+    font-size: em(20);
+    color: #000;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 10;
+  }
+  
+  .modal-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    color: #026ecc;
+    font-size: em(14);
+    font-weight: 700;
+  }
+  .modal-title {
+    font-size: em(30);
+    font-weight: 600;
+    line-height: 1.4;
+    span {
+      font-weight: 800;
+    }
+  }
+  .modal-text {
+    font-size: em(12);
+    font-weight: 600;
+    line-height: 2;
+  }
+  
+  .btn {
+    font-size: em(10);
+  }
+  .btn-primary {
+    background-color: #3382c7;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.9em 0.5em;
+    color: #fff;
+    line-height: normal;
+    span {
+    line-height: 3.4;
+    }
+    &:hover {
+      background-color: #3382c7;
+    }
+  }
+  .btn-secondary {
+    background-color: #252525;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.9em 0.5em;
+    color: #fff;
+    line-height: normal;
+    span {
+    line-height: 3.4;
+    }
+    &:hover {
+      background-color: #252525;
+      color: #fff;
+    }
+  }
+  .btn-primary:before {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-size: 2em;
+    width: (40em / 14);
+    float: left;
+    margin: -0.4em -0.2em;
+    padding: 0.76em 0.5em;
+    background: #4565a2;
+    content: "\f230";
+  }
+  .btn-secondary:before {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    font-size: 2em;
+    width: (40em / 14);
+    float: left;
+    margin: -0.4em -0.2em;
+    padding: 0.78em 0.5em;
+    background: #0f0f0f;
+    content: "\f1d8";
+  }
+  
+  img {
+    width: 100%;
+    max-height: 405px;
+  }
+  
+    /* Mobile Fixes */
+  @media screen and (max-width: 690px) {
+    img { height: 100%; }
+  }
+  @media screen and (max-width: 575px) {
+    .col-lg-6 { padding-left: 0; }
+  }
+  @media screen and (max-width: 370px) {
+    #eval-modal .modal-body { 
+      max-height: 100%;
+    }
+    .wrap { 
+      padding-bottom: 0rem !important; 
+    }
+    .modal-container { 
+      padding-left: 0.5rem !important; 
+      padding-right: 0.5rem !important; 
+      padding-bottom: 1.5rem !important; }
+    .btn { 
+      font-size: em(8); 
+    }
+    .form-control {
+      line-height: 1;
+    }
+  }
+  
+  
+  /* Form */
+  .show {
+    display: none;
+  }
+  .form-control {
+    line-height: 2.3;
+    background-color: #f5f5f5;
+    &:focus {
+      background-color: #f5f5f5;
+    }
+  }
+  ::-webkit-input-placeholder { 
+    color:    #252525;
+    font-size: em(10);
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+  }
+  :-moz-placeholder { 
+     color:    #252525;
+    font-size: em(10);
+     opacity:  1;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+  }
+  ::-moz-placeholder { 
+     color:    #252525;
+    font-size: em(10);
+     opacity:  1;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+  }
+  :-ms-input-placeholder { 
+    color:    #252525;
+    font-size: em(10);
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .btn-success {
+    background-color: #252525;
+    line-height: 3.7;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #252525;
+    }
+  }
+  
+
+}
+
+  </style>
   </head>
   <body class="">
+<div data-component="cta-newsletter-modal">
+  <div class="modal fade" id="newsletter-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-0 border-0">
+        <button type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body py-0">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p-0">
+              <div class="p-3 wrap">
+                <div class="pl-3 py-3 modal-container">
+                  <div>
+                    <h6 class="modal-subtitle mb-3">STAY CURRENT</h6>
+                    <h4 class="modal-title"><span>Sign Up</span> For <br>Our Newsletter</h4>
+                    <hr>
+                    <p class="modal-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    <div class="hide">
+                      <button class="btn btn-block rounded-0 border-0 btn-primary">
+  <span>SUBSCRIBE USING FACEBOOK</spam></button>
+                      <button class="btn btn-block rounded-0 border-0 btn-secondary" id="btn-form">
+  <span>SUBSCRIBE USING EMAIL</span></button>
+                    </div> <!-- /.hide -->
+                    <div class="show">
+                      <form>
+                        <div class="form-group mb-2">
+                          <input type="email" class="form-control rounded-0 border-0" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address">
+                        </div>
+                        <button class="btn btn-block btn-success rounded-0 border-0">Subscribe</button>
+                      </form>
+                    </div> <!-- /.show -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pr-0">
+              <img src="https://res.cloudinary.com/dt9b7pad3/image/upload/v1493819606/newsletter_left_image_nzdpnw.png">
+            </div>
+          </div><!-- /.row -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Movies Hove</a>
@@ -102,9 +338,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/movies">Movies </a>
-      <a class="nav-item nav-link" href="mailto:info@domain.com">Request </a>
+      <a class="nav-item nav-link active" href="/"> Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/movies"> Movies </a>
+      <a class="nav-item nav-link" href="/search"> Search </a>
+      <a class="nav-item nav-link" href="/fetchNewMovies"> Fetch New Movies </a>
+   
+
     </div>
   </div>
 </nav>
@@ -172,7 +411,7 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12 text-center">
-<p>MoviesHove © 2019. All rights reserved.</p>
+<p>MoviesHove © 2021. All rights reserved.</p>
 </div>
 </div>
 </div>

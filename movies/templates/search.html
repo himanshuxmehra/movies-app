@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Search with the biggest movie database!</h1>
+  <p class="lead">First search may take some time.</p>
+  <hr class="my-4">
+  <p>Enter the name below</p>
+
+  <form class="form-inline" method="GET" action="" style="align: centre !important;">
+<div class="input-group input-group-lg">
+    <input type="search" class="form-control large input-group-text" name="search" />
+  <button type="submit" class="btn btn-primary btn-lg">
+Search  </button>
+
+</div>
+  </form>
+</div>
+
+
+</div>
+<div class="card-columns">
+
+{% for result in all_search_results %}
+    <div class="card">
+        <img src="{{result.cover}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h3 class="card-title"><a href="/watch-{{result.slug}}">{{result.title}}</a> | {{result.year}}</h3>
+        <p class="card-text">{{result.plot}}</p>
+        <p class="card-text"><button class="btn btn-danger"><a style="color:white" href="/watch-{{result.slug}}">Watch It!</a></button></p>
+        </div>
+    </div>
+{% empty %}
+<center>
+   <h1>No Results Found</h1>
+   <br></center>
+{% endfor %}
+</div>
+{% endblock %}

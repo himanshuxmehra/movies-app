@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 
 {% block page_content %}
-
+<style>
+body {
+  background: #fff !important;
+}
+</style>
   <ul class="list-unstyled">
 
     {% for movie in allmovies %}
               <li class="media">
-    <img src="{{ movie.poster.url }}" class="mr-3" alt="..." width="360" height="144">
+    <img src="{{ movie.poster }}" class="mr-3" alt="..." height="240">
     <div class="media-body">
       <h5 class="mt-0 mb-1">{{ movie.title }}</h5>
       {{ movie.plot }}
