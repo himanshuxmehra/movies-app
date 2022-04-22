@@ -1,4 +1,4 @@
-Django==3.2.5
+Django==3.2.13
 Pillow==9.0.0
 requests==2.26.0
 python-dotenv==0.17.0
