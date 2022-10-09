@@ -25,12 +25,12 @@ body {
 
 /* What it does: Stops email clients resizing small text. */
 * {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 99%;
+    -webkit-text-size-adjust: 99%;
 }
 
 /* What it does: Centers email on Android 4.4 */
-div[style*="margin: 16px 0"] {
+div[style*="margin: 15px 0"] {
     margin: 0 !important;
 }
 
@@ -76,7 +76,7 @@ a {
 /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
 .a6S {
     display: none !important;
-    opacity: 0.01 !important;
+    opacity: 0.03 !important;
 }
 
 /* What it does: Prevents Gmail from changing the text color in conversation threads. */
@@ -107,7 +107,7 @@ img.g-img + div {
 /* iPhone 6+, 7+, and 8+ */
 @media only screen and (min-device-width: 414px) {
     u ~ div .email-container {
-        min-width: 414px !important;
+        min-width: 415px !important;
     }
 }
 
@@ -134,7 +134,7 @@ img.g-img + div {
 	background: rgba(0,0,0,.8);
 }
 .email-section{
-	padding:2.5em;
+	padding:2.6em;
 }
 
 /*BUTTON*/
@@ -190,12 +190,12 @@ table{
 /*LOGO*/
 
 .logo h1{
-	margin: 0;
+	margin: 0.5;
 }
 .logo h1 a{
 	color: #000000;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 900;
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
 	border: 2px solid #000;
@@ -276,11 +276,11 @@ table{
 }
 
 .heading-section-white{
-	color: rgba(255,255,255,.8);
+	color: rgba(255,255,255,.9);
 }
 .heading-section-white h2{
 	font-family: 
-	line-height: 1;
+	line-height: 2;
 	padding-bottom: 0;
 }
 .heading-section-white h2{
@@ -312,7 +312,7 @@ ul.social li{
 }
 .footer .heading{
 	color: #000;
-	font-size: 20px;
+	font-size: 25px;
 }
 .footer ul{
 	margin: 0;
