@@ -8,7 +8,6 @@ Pillow v9.0.0
 requests v2.26.0
 python-dotenv v0.17.0
 apscheduler v3.7.0
-psycopg2-binary v2.8.6
   
 ## Installation Steps:
   
@@ -17,4 +16,24 @@ Installation is pretty easy!
 ```bash  
 pip install -r requirements.txt  
 python manage.py runserver
+```
+
+```bash  
+#db config
+DB_NAME =
+DB_USE =
+DB_PASS = 
+DB_SERVICE =
+DB_PORT = 
+
+# tmdb api
+API_KEY = 
+
+# domain
+DOMAIN = 
+
+#smtp config
+MAIL_API_URL = 
+MAIL_API_KEY = 
+MAIL_API_ADDRESS = 
 ```
