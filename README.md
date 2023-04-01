@@ -11,7 +11,7 @@ apscheduler v3.7.0
   
 ## Installation Steps:
   
-Installation is pretty easy!  
+Installation is pretty simple!  
   
 ```bash  
 pip install -r requirements.txt  
